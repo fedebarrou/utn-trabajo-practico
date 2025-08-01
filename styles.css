@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+
+.section-grid {
+  display: grid;
+  grid-template-columns: 25rem 1fr;
+  height: 100%;
+}
+
+
+
+/*SIDEBAR*/
+
+.sidebar {
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+
+.sidebar li {
+  border-bottom: 1px solid ghostwhite;
+}
+
+.search {
+  border: 1.5px solid gainsboro;
+  height: 2rem;
+  border-radius: 0.4rem;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(26, 26, 26, 0.1);
+}
+
+
+.contact-list {
+  overflow-y: auto;
+}
+
+.contact {
+  display: flex;
+  border-radius: 0.4rem;
+  padding: 0.8rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+.contact div {
+  width: 100%;
+}
+
+.contact img,
+.chat-header img {
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: transparent;
+}
+
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.contact h4,
+.chat-header h3 {
+  font-size: large;
+  background-color: transparent;
+  white-space: nowrap;
+}
+
+
+
+
+
+
+.status {
+  color: gray;
+  font-size: small;
+}
+
+
+.status::before {
+  content: '●';
+  margin-right: 0.4rem;
+}
+
+.online::before {
+  color: green;
+}
+
+
+.offline::before {
+  color: red;
+}
+
+
+.contact:hover {
+  background-color: ghostwhite;
+}
+
+
+
+
+/*CHAT*/
+
+.flex {
+  display: flex;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid gainsboro;
+  border-radius: 0.3rem;
+}
+
+
+.chat header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid gainsboro;
+}
+
+
+.chat-messages {
+  background-color: ghostwhite;
+  height: 100%;
+  padding: 1rem;
+}
+
+
+.chat-footer {
+  background-color: aqua;
+
+}
