@@ -26,13 +26,11 @@ p {
 /*SIDEBAR*/
 
 .sidebar {
-  height: 100%;
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
   padding: 1rem;
-  gap: 1rem;
-  box-sizing: border-box;
 }
 
 
@@ -59,7 +57,10 @@ p {
 
 
 .contact-list {
+  flex: 1;
   overflow-y: auto;
+  min-height: 0;
+  /* 👈 Esto activa el scroll */
 }
 
 .contact {
@@ -136,11 +137,10 @@ p {
 }
 
 .chat {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
   border: 1px solid gainsboro;
-  border-radius: 0.3rem;
 }
 
 
@@ -153,12 +153,12 @@ p {
 
 
 .chat-messages {
+  overflow-y: auto;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   background-color: ghostwhite;
-  height: 100%;
-  padding: 1rem;
 }
 
 
