@@ -11,6 +11,10 @@ body {
 }
 
 
+p {
+  font-size: 18px;
+}
+
 .section-grid {
   display: grid;
   grid-template-columns: 25rem 1fr;
@@ -36,13 +40,22 @@ body {
   border-bottom: 1px solid ghostwhite;
 }
 
-.search {
+.search,
+.chat-footer input {
   border: 1.5px solid gainsboro;
   height: 2rem;
   border-radius: 0.4rem;
-  padding: 1rem;
+  padding: 0rem 1rem;
+  width: 100%;
+
+}
+
+
+.search {
   box-shadow: 0 2px 4px rgba(26, 26, 26, 0.1);
 }
+
+
 
 
 .contact-list {
@@ -140,13 +153,93 @@ body {
 
 
 .chat-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   background-color: ghostwhite;
   height: 100%;
   padding: 1rem;
 }
 
 
-.chat-footer {
-  background-color: aqua;
+.message {
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem
+}
 
+
+.chat-actions {
+  display: flex;
+  gap: 0.8rem;
+
+}
+
+
+.chat-actions button,
+.chat-footer button {
+  border: none;
+  color: gray;
+  font-size: x-large;
+  background-color: transparent;
+}
+
+
+
+.timestamp {
+  color: gray;
+  font-size: smaller;
+}
+
+
+.sent {
+  background-color: aliceblue;
+  align-self: end;
+  text-align: right;
+}
+
+
+.received {
+  background-color: #f5f5f5;
+  align-self: start;
+  text-align: left;
+}
+
+
+.chat-footer {
+  padding: 1rem;
+  border-top: 1px solid gainsboro;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+
+.button-back {
+  display: none;
+  color: grey;
+  background-color: transparent;
+  border: none;
+  font-size: x-large;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .section-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .button-back {
+    display: block;
+  }
 }
