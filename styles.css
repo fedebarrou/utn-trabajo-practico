@@ -103,6 +103,7 @@ p {
   display: flex;
   align-items: center;
   gap: 1rem;
+
 }
 
 
@@ -171,6 +172,7 @@ p {
   justify-content: space-between;
   padding: 1rem;
   border-bottom: 1px solid gainsboro;
+  gap: 1rem;
 }
 
 
@@ -288,7 +290,14 @@ p {
   /* para Chrome, Safari */
 }
 
-@media (max-width: 768px) {
+
+
+
+
+
+
+/*PANTALLA CELULAR*/
+@media (max-width: 767px) {
   .sidebar {
     display: none;
   }
@@ -297,8 +306,39 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .button-back {
+    display: block;
+  }
+
+  .chat header {
+    background: linear-gradient(to bottom, #ffffff, #b4b4b4);
+  }
+
+  .chat-actions i {
+    color: black;
+  }
+}
+
+
+
+
+
+
+/*PANTALLA TABLETS*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .sidebar {
+    display: none;
+  }
+
+  .section-grid {
+    grid-template-columns: 1fr;
+  }
 
   .button-back {
     display: block;
+  }
+
+  .chat header {
+    background: white;
   }
 }
