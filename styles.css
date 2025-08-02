@@ -264,8 +264,29 @@ p {
 }
 
 
+.chat-textarea {
+  resize: none;
+  border: 1.5px solid gainsboro;
+  border-radius: 0.4rem;
+  padding: 0rem 1rem;
+  align-content: center;
+  width: 100%;
+  min-height: 2rem;
+  overflow-y: auto;
+  font-family: inherit;
+  font-size: 1rem;
+}
 
+.chat-textarea {
+  overflow-y: auto;
+  scrollbar-width: none;
+  /* para Firefox */
+}
 
+.chat-textarea::-webkit-scrollbar {
+  display: none;
+  /* para Chrome, Safari */
+}
 
 @media (max-width: 768px) {
   .sidebar {
