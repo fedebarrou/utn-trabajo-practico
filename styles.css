@@ -3,7 +3,6 @@
   padding: 0;
 }
 
-
 html,
 body {
   height: 100%;
@@ -15,6 +14,15 @@ body {
 p {
   font-size: 18px;
 }
+
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
 
 .section-grid {
   display: grid;
@@ -39,22 +47,30 @@ p {
   border-bottom: 1px solid #ebebeb;
 }
 
-.search,
-.chat-footer input {
-  border: 1.5px solid gainsboro;
-  height: 2rem;
-  border-radius: 0.4rem;
-  padding: 0rem 1rem;
-  width: 100%;
 
+.input-content {
+  position: relative;
+  display: flex;
+  border: 1px solid gainsboro;
+  height: 2.5rem;
+  border-radius: 0.4rem;
+  padding: 0rem 1rem 0rem 0rem;
+  align-items: center;
+}
+
+
+.input-content:focus-within {
+  border-color: #2b8b2e;
+  box-shadow: 0 0 5px rgba(85, 173, 72, 0.788);
 }
 
 
 .search {
-  box-shadow: 0 2px 4px rgba(26, 26, 26, 0.1);
+  border: none;
+  margin: 2px;
+  padding: 0rem 1rem;
+  width: 100%;
 }
-
-
 
 
 .contact-list {
@@ -76,11 +92,9 @@ p {
 .contact img,
 .chat-header img {
   object-fit: cover;
-  /* ESTA LÍNEA ES LA CLAVE */
   background-color: transparent;
   border-radius: 50%;
 }
-
 
 .contact img {
   min-height: 2.5rem;
@@ -90,13 +104,10 @@ p {
 }
 
 
-
 .chat-header img {
   height: 3.5rem;
   width: 3.5rem;
 }
-
-
 
 
 .chat-header {
@@ -106,20 +117,19 @@ p {
 
 }
 
-
 .contact h4,
 .chat-header h3 {
   background-color: transparent;
   white-space: nowrap;
 }
 
-
 .contact h4 {
   font-size: large;
 }
 
 
-.chat-header h3 {
+.chat-header h3,
+.chat-actions button {
   font-size: x-large;
 }
 
@@ -152,6 +162,7 @@ p {
 .contact:hover {
   background-color: rgb(225, 255, 222);
 }
+
 
 
 
@@ -222,8 +233,16 @@ p {
 .chat-footer button {
   border: none;
   color: gray;
-  font-size: x-large;
   background-color: transparent;
+  cursor: pointer;
+}
+
+
+
+.chat-actions button:hover,
+.chat-footer button:hover {
+
+  color: rgb(60, 169, 60);
 }
 
 
@@ -251,9 +270,6 @@ p {
 .chat-footer {
   padding: 1.5rem 1rem;
   border-top: 1px solid gainsboro;
-  display: flex;
-  justify-content: space-between;
-  gap: 0.5rem;
 }
 
 
@@ -268,31 +284,26 @@ p {
 
 .chat-textarea {
   resize: none;
-  border: 1.5px solid gainsboro;
-  border-radius: 0.4rem;
+  border: none;
+  margin: 2px;
   padding: 0rem 1rem;
   align-content: center;
   width: 100%;
-  min-height: 2rem;
-  overflow-y: auto;
-  font-family: inherit;
-  font-size: 1rem;
-}
-
-.chat-textarea {
   overflow-y: auto;
   scrollbar-width: none;
-  /* para Firefox */
+  font-family: inherit;
 }
+
 
 .chat-textarea::-webkit-scrollbar {
   display: none;
-  /* para Chrome, Safari */
 }
 
 
 
-
+.color-gray {
+  color: gray;
+}
 
 
 
