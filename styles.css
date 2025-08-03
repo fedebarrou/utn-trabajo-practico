@@ -31,7 +31,6 @@ textarea:focus {
 }
 
 
-
 /*SIDEBAR*/
 
 .sidebar {
@@ -292,6 +291,7 @@ textarea:focus {
   overflow-y: auto;
   scrollbar-width: none;
   font-family: inherit;
+  font-size: medium;
 }
 
 
