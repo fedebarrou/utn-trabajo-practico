@@ -64,6 +64,11 @@ textarea:focus {
 }
 
 
+.input-content:focus-within i {
+  animation: pulse 1.2s infinite ease-in-out;
+}
+
+
 .search {
   border: none;
   margin: 2px;
@@ -303,6 +308,24 @@ textarea:focus {
 
 .color-gray {
   color: gray;
+}
+
+
+
+
+/*ANIMACION ICONO AVION*/
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 
