@@ -162,6 +162,10 @@ textarea:focus {
   color: red;
 }
 
+.writing {
+  color: gray;
+  font-style: italic;
+}
 
 .contact:hover {
   background-color: rgb(225, 255, 222);
