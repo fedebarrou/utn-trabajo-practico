@@ -208,7 +208,7 @@ textarea:focus {
   flex-direction: column;
   gap: 1.5rem;
 
-  background-image: url("./background-chat.png");
+  background-image: url("./assets/background-chat.png");
   background-repeat: repeat;
   background-size: contain;
   background-position: center top;
