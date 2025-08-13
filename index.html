@@ -7,15 +7,16 @@
   <title>Chat UI</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script type="module" src="main.js" defer></script>
 </head>
 
 <body>
   <section class="section-grid">
     <aside class="sidebar">
 
-      <div class="input-content ">
+      <div class="input-content">
 
-        <input name="search contact" type="search" placeholder="Buscar..." class="search">
+        <input name="search contact" type="search" id="inputSearch" placeholder="Buscar..." class="search">
 
 
         <i class="fa-solid fa-search color-gray "></i>
@@ -72,6 +73,9 @@
             <p class="status offline">desconectado desde Oct 28</p>
           </div>
         </li>
+
+
+
       </ul>
     </aside>
 
@@ -163,9 +167,10 @@
 
 
         <div class="input-content">
-          <textarea name="textarea mensaje" class="chat-textarea" placeholder="Ingrese el texto aquí..."></textarea>
+          <textarea name="textarea mensaje" id="textareaSend" class="chat-textarea"
+            placeholder="Ingrese el texto aquí..."></textarea>
 
-          <button>
+          <button id="buttonSend">
             <i class="fa-solid fa-paper-plane"></i>
           </button>
 
@@ -177,5 +182,8 @@
     </main>
   </section>
 </body>
+
+
+
 
 </html>
